@@ -1,0 +1,34 @@
+{% include "scrapper/base.html" %}
+{% load custom_tags %}
+{% block content %}
+
+<div class="container">
+<div class='jumbotron'>
+<div class="table-users">
+    <div class="header"><h4>Reviews on {{product}}</h4></div>
+  
+    <table class="content-table" cellspacing="0">
+        <tr>
+           <th>Product</th>
+           <th>Name</th>
+           <th>Rating</th>
+           <th>Comment Heading</th>
+           <th width="230">Comments</th>
+        </tr>
+           {% for review in reviews %}
+        <tr>
+            <td>{{ review|get_item:"Product"}}</td>
+            <td>{{review|get_item:"Name"}}</td>
+            <td>{{review|get_item:"Rating"}}</td>
+            <td>{{review|get_item:"CommentHead"}}</td>
+            <td>{{review|get_item:"Comment"}}</td>
+           
+        </tr>
+         {% endfor %}
+    </table>
+</div>
+</div>
+</div>
+
+
+{% endblock %}

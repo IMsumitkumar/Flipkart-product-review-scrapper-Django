@@ -1,0 +1,21 @@
+{% include "scrapper/base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class='jumbotron'>
+            <div class="alert alert-warning" role="alert">
+                Make Sure <span class="badge badge-dark"> MongoDB </span> server is installed and running in your local machine
+              </div>
+
+            <form action="{% url 'result' %}" method='post'>
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="content">Enter product to scrap the reviews</label>
+                    <input name="content" type="text" class="form-control" id="content" aria-describedby="text" placeholder="Enter search string">
+                  </div>
+            </form>
+
+        </div>
+    </div>
+
+{% endblock %}
