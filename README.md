@@ -50,3 +50,7 @@ LINK (DEPLOYED ON HEROKU) : https://flip-review-scrapper.herokuapp.com/
     RUN ->
     1. python manage.py runserver
     
+##### Make MongoDB available
+    
+    1. Go to scrapper Folder -> Views.py -> uncomment the scrap function and comment down the another scrap funtion 
+    2. make sure mongoDb is installed in your machine and running otherwise it will show 'Something went wrong'
