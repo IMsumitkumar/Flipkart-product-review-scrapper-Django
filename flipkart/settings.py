@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'ew1cds2f6io2!fh*08qkt5@c(y+qc_-x)#99vh(oo6i3554mlb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['flip-review-scrapper.herokuapp.com','127.0.0.1']
 
